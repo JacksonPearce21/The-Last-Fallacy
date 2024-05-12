@@ -1,2 +1,2 @@
 # The-Last-Fallacy
-The Last Fallacy is a 2d turn-based sprite game developed with Godot.
+The Last Fallacy is a 2d turn-based sprite RPG developed with Godot.

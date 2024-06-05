@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var current_dir = "none"
-const SPEED = 40
+const SPEED = 45
 
 func _ready():
 	$AnimatedSprite2D.play("side_idle")

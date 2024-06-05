@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7uowd3o8ncr4"]
+
+[ext_resource type="Texture2D" uid="uid://dcfkp22bae1s3" path="res://assets/Battle Backgrounds on RPG-Palmia - DeviantArt (1).jpg" id="1_ofjy4"]
+[ext_resource type="PackedScene" uid="uid://culappb1q1agd" path="res://enemy_group.tscn" id="2_bpacp"]
+[ext_resource type="PackedScene" uid="uid://ymq2m0kx513y" path="res://Scenes/player_group.tscn" id="3_psli7"]
+
+[node name="BattleScene" type="Node2D"]
+
+[node name="BattleBackgroundsOnRpg-palmia-DeviantArt(1)" type="Sprite2D" parent="."]
+modulate = Color(0.807843, 0.807843, 0.807843, 1)
+texture_filter = 2
+position = Vector2(580.375, 319.813)
+scale = Vector2(2.3055, 2.5775)
+texture = ExtResource("1_ofjy4")
+
+[node name="EnemyGroup" parent="." instance=ExtResource("2_bpacp")]
+position = Vector2(782, 271)
+scale = Vector2(5, 5)
+
+[node name="PlayerGroup" parent="." instance=ExtResource("3_psli7")]
+position = Vector2(178, 319)
+scale = Vector2(5, 5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Choice" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -202.0
+offset_top = -208.0
+offset_right = -103.0
+offset_bottom = -107.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Attack" type="Button" parent="CanvasLayer/Choice"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Attack"
+
+[node name="Defend" type="Button" parent="CanvasLayer/Choice"]
+layout_mode = 2
+text = "Defend"
+
+[node name="Run" type="Button" parent="CanvasLayer/Choice"]
+layout_mode = 2
+text = "Run"
+
+[connection signal="next_player" from="EnemyGroup" to="PlayerGroup" method="_on_enemy_group_next_player"]
+[connection signal="pressed" from="CanvasLayer/Choice/Attack" to="EnemyGroup" method="_on_attack_pressed"]

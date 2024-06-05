@@ -1,6 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://bjroir74hcbii"]
+[gd_scene load_steps=23 format=3 uid="uid://bjroir74hcbii"]
 
+[ext_resource type="Script" path="res://Player_Combat.gd" id="1_71bce"]
 [ext_resource type="Texture2D" uid="uid://bwuhwa5tp1o0j" path="res://assets/sprites/characters/slime.png" id="1_s1uop"]
+[ext_resource type="Texture2D" uid="uid://c4uvmm0o87a4t" path="res://hand_cursor0000.png" id="2_d4osi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_apiik"]
 atlas = ExtResource("1_s1uop")
@@ -129,7 +131,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f2b31")
 }],
-"loop": true,
+"loop": false,
 "name": &"Hurt",
 "speed": 5.0
 }, {
@@ -152,12 +154,20 @@ animations = [{
 }]
 
 [node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_71bce")
 
 [node name="Focus" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-18, 2)
+scale = Vector2(0.460938, 0.367188)
+texture = ExtResource("2_d4osi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_3qobj")
-animation = &"Attack"
+animation = &"Hurt"
+frame = 2
+frame_progress = 0.360042
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 self_modulate = Color(0.2, 1, 0.32549, 1)

@@ -1,5 +1,6 @@
-[gd_scene load_steps=54 format=3 uid="uid://dfjs52hcp3vo5"]
+[gd_scene load_steps=55 format=3 uid="uid://dfjs52hcp3vo5"]
 
+[ext_resource type="Texture2D" uid="uid://c4uvmm0o87a4t" path="res://hand_cursor0000.png" id="1_yo5am"]
 [ext_resource type="Texture2D" uid="uid://dj5fk6vkdvrr2" path="res://assets/sprites/characters/player.png" id="2_mqcrp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dihqe"]
@@ -206,7 +207,7 @@ region = Rect2(192, 192, 48, 48)
 atlas = ExtResource("2_mqcrp")
 region = Rect2(240, 192, 48, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_cs210"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_who3j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -349,6 +350,14 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_75grf")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1se42")
 }, {
@@ -412,22 +421,25 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="PlayerCombat" type="Node2D"]
+
+[node name="Focus" type="Sprite2D" parent="."]
+position = Vector2(-16, -7)
+scale = Vector2(0.480469, 0.371094)
+texture = ExtResource("1_yo5am")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 1)
-sprite_frames = SubResource("SpriteFrames_cs210")
-animation = &"side_idle"
+position = Vector2(-1, 0)
+sprite_frames = SubResource("SpriteFrames_who3j")
+animation = &"hurt"
 offset = Vector2(0, -17)
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="ProgressBar2" type="ProgressBar" parent="."]
 self_modulate = Color(0.2, 1, 0.32549, 1)
 offset_left = -8.0
-offset_top = -26.0
+offset_top = -24.0
 offset_right = 104.0
-offset_bottom = 14.0
+offset_bottom = 16.0
 scale = Vector2(0.15, 0.15)
 pivot_offset = Vector2(0.15, 0)
 value = 100.0
-
-[node name="Focus" type="Sprite2D" parent="."]

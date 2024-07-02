@@ -1,7 +1,8 @@
-[gd_scene load_steps=56 format=3 uid="uid://cymfh8ngnbh45"]
+[gd_scene load_steps=57 format=3 uid="uid://cymfh8ngnbh45"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_e4rhe"]
 [ext_resource type="Texture2D" uid="uid://dj5fk6vkdvrr2" path="res://assets/sprites/characters/player.png" id="2_geh3t"]
+[ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="3_faw37"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dihqe"]
 atlas = ExtResource("2_geh3t")
@@ -419,6 +420,7 @@ height = 18.0
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
+collision_layer = 3
 script = ExtResource("1_e4rhe")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -430,8 +432,12 @@ offset = Vector2(0, -17)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
+script = ExtResource("3_faw37")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
 position = Vector2(0, -7)
 shape = SubResource("CapsuleShape2D_u4cw8")
+
+[connection signal="camera_off" from="." to="Camera2D" method="_on_player_camera_off"]
+[connection signal="camera_on" from="." to="Camera2D" method="_on_player_camera_on"]

@@ -6,10 +6,20 @@
 [node name="EnemyGroup" type="Node2D"]
 script = ExtResource("1_i1ynm")
 
-[node name="Enemy" parent="." instance=ExtResource("1_8gggk")]
+[node name="Enemy 1" parent="." instance=ExtResource("1_8gggk")]
 
-[node name="Enemy2" parent="." instance=ExtResource("1_8gggk")]
+[node name="Enemy 2" parent="." instance=ExtResource("1_8gggk")]
 
-[node name="Enemy3" parent="." instance=ExtResource("1_8gggk")]
+[node name="Enemy 3" parent="." instance=ExtResource("1_8gggk")]
 
-[node name="Enemy4" parent="." instance=ExtResource("1_8gggk")]
+[node name="Enemy 4" parent="." instance=ExtResource("1_8gggk")]
+
+[connection signal="death" from="Enemy 1" to="." method="_on_enemy_1_death"]
+[connection signal="death" from="Enemy 2" to="." method="_on_enemy_2_death"]
+[connection signal="death" from="Enemy 3" to="." method="_on_enemy_3_death"]
+[connection signal="death" from="Enemy 4" to="." method="_on_enemy_4_death"]
+
+[editable path="Enemy 1"]
+[editable path="Enemy 2"]
+[editable path="Enemy 3"]
+[editable path="Enemy 4"]

@@ -1,15 +1,29 @@
 [gd_scene load_steps=3 format=3 uid="uid://ymq2m0kx513y"]
 
-[ext_resource type="PackedScene" uid="uid://dfjs52hcp3vo5" path="res://Player_Combat.tscn" id="1_2l34c"]
 [ext_resource type="Script" path="res://Scenes/player_group.gd" id="1_x7a0d"]
+[ext_resource type="PackedScene" uid="uid://d2mt0qs046jax" path="res://Scenes/player_combat.tscn" id="2_y6ivc"]
 
 [node name="PlayerGroup" type="Node2D"]
 script = ExtResource("1_x7a0d")
 
-[node name="PlayerCombat" parent="." instance=ExtResource("1_2l34c")]
+[node name="Player 1" parent="." instance=ExtResource("2_y6ivc")]
 
-[node name="PlayerCombat2" parent="." instance=ExtResource("1_2l34c")]
+[node name="Player 2" parent="." instance=ExtResource("2_y6ivc")]
 
-[node name="PlayerCombat3" parent="." instance=ExtResource("1_2l34c")]
+[node name="Focus" parent="Player 2" index="3"]
+visible = false
 
-[node name="PlayerCombat4" parent="." instance=ExtResource("1_2l34c")]
+[node name="Player 3" parent="." instance=ExtResource("2_y6ivc")]
+
+[node name="Focus" parent="Player 3" index="3"]
+visible = false
+
+[node name="Player 4" parent="." instance=ExtResource("2_y6ivc")]
+
+[node name="Focus" parent="Player 4" index="3"]
+visible = false
+
+[editable path="Player 1"]
+[editable path="Player 2"]
+[editable path="Player 3"]
+[editable path="Player 4"]

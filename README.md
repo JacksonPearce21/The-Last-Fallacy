@@ -1,78 +1,78 @@
-<p align="center">
-  <img width="1280" alt="cover" src="https://user-images.githubusercontent.com/2206700/189457799-6327bab0-b085-4421-8640-6a18e395d17d.png">
-</p>
+# The Last Fallacy
 
-<h1 align="center">Dialogic 2</h1>
-
-<p align="center">
-  Create <b>Dialogs</b>, <b>Visual Novels</b>, <b>RPGs</b>, and <b>manage Characters</b> with Godot to create your Game!
-</p>
-
-<p align="center">
-  <a href="https://discord.gg/DjcDgDaTMe" target="_blank" style="text-decoration:none"><img alt="Discord" src="https://img.shields.io/discord/628713677239091231?logo=discord&labelColor=CFC9C8&color=646FA9"></a>
-  <a href="https://godotengine.org/download/" target="_blank" style="text-decoration:none"><img alt="Godot v4.2+" src="https://img.shields.io/badge/Godot-v4.2+-%23478cbf?labelColor=CFC9C8&color=49A9B4" /></a>
-  <a href="https://docs.dialogic.pro/introduction.html" target="_blank" style="text-decoration:none"><img alt="Dialogic 2 Documentation" src="https://img.shields.io/badge/documention-online-green?labelColor=CFC9C8&color=6BCD69"></a>
-  <a href="https://github.com/dialogic-godot/dialogic/actions/workflows/unit_test.yml" target="_blank style="text-decoration:none"><img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/dialogic-godot/dialogic/unit_test.yml?labelColor=CFC9C8&color=DBDCB8"></a>
-  <a href="https://github.com/dialogic-godot/dialogic/releases"  target="_blank" style="text-decoration:none"><img alt="Latest Dialogic Release" src="https://img.shields.io/github/v/release/dialogic-godot/dialogic?include_prereleases&labelColor=CFC9C8&color=CBA18C"></a>
-</p>
+The Last Fallacy is a simple, top-down, turn-based RPG reminicent of older RPG's. This comprehensive guide will provide you with everything you need to know to get started with the project, from installation instructions to a detailed description of its features. As this is for a school project, and I am new to developing games, it will not a feature stacked game and will lacking in multiple departments.
 
 ## Table of Contents
-- [Version](#version)
+
+- [Features](#features)
+
+- [Story](#story)
+
 - [Installation](#installation)
-- [Documentation](#documentation)
-- [Testing](#testing)
-- [Credits](#credits)
+
+  - [Download the latest release](#download-the-latest-release)
+  - [Godot Setup](#godot-setup)
+  - [Dialogic](#dialogic-setup)
+
+- [Development log](#development-log)
+
 - [License](#license)
 
-## Version
+## Features
 
-Dialogic 2 **requires at least Godot 4.2**.
+What you can expect from The Last Fallacy:
 
-[If you are looking for the Godot 3.x version (Dialogic 1.x) you can find it here.](https://github.com/dialogic-godot/dialogic-1)
+- Simple Turn-based combat system
+
+- A small world which the player can explore
+
+- The setup and start to a narative
+
+## Story
+
+The Last Fallacy starts with the player charater falling into the world below, a world devoid of all colour, and follows his adventures as the chosen one - defeating all sorts of monsters across this fantasy world, the player must reach the devine power that is forcing the once happy world into the now bleak, demon filled land. You are The Last Fallacy sent upon this despair-fallen, strucken world. (This is merely a basis I set when I started development, the release I will be sending at the end of my school project will not be able to convey nearly as much of the base narative that I wish for).
 
 ## Installation
-Follow the installation instructions on our [Getting Started](https://docs.dialogic.pro/getting-started.html#1-installation--activation) documentation.
 
-Dialogic comes with an auto-updater so you can install future versions right from within the plugin.
+Follow these steps to install Godot and run The Last Fallacy!
 
-## Documentation
-You can find the official documentation of Dialogic here: [Dialogic Documentation](https://docs.dialogic.pro/)
+### Godot Setup
 
-There is a Class Reference as well: [Class Reference](https://docs.dialogic.pro/class_index.html)
+1. Go to [https://godotengine.org/](https://godotengine.org/)
 
+2. Download the latest release for your platform
 
-## Connect with us!
-If you need help or want to share your Dialogic projects, take a look at the following options:
+3. Run and follow the installation guide
 
-- Ask questions, or report bugs on our [Discord](https://discord.gg/DjcDgDaTMe)
-- Report bugs and issues on the [GitHub Issues Page](https://github.com/dialogic-godot/dialogic/issues)
-- Ask questions on [GitHub Discussions](https://github.com/dialogic-godot/dialogic/discussions)
+### Dialogic Setup
 
-## Testing
-Dialogic uses [Unit Tests](https://en.wikipedia.org/wiki/Unit_testing) to ensure specific parts function as expected. These tests run on every git push and pull request. The framework to do these tests is called [gdUnit4](https://github.com/MikeSchulze/gdUnit4) and our tests reside in the [/Tests/Unit](https://github.com/dialogic-godot/dialogic/tree/main/Tests/Unit) path. We recommend installing the `gdUnit4` add-on from the `AssetLib`, with this add-on, you can run tests locally.
+1. Download the [latest release](https://github.com/dialogic-godot/dialogic) of Dialogic: 
 
-To get started, take a look at the existing files in the path and read the documentation to [create your first test](https://mikeschulze.github.io/gdUnit4/first_steps/firstTest/).
+2. Open Godot and navagate to 'import' in the asset library tab
 
-## Interacting with the Source Code
-All methods and variables in the Dialogic 2 source **code prefixed with an underscore (`_`)** are considered *private*, for instance: `_remove_character()`.
+3. Select the Dialogic zip
 
-While you can use them, they may change in their behavior or change their signature, causing breakage in your code while moving between versions.
-Most private methods are used inside public ones; if you need help, check the documentation.
+4. Enable 'Ignore asset root', then import
 
-**Public methods and variables can be found in our [Class Reference](https://docs.dialogic.pro/class_index.html).**
+### Download The Latest Release
 
-During the Alpha and Beta version stages, code may change at any Dialogic Release to allow drafting a better design.
-Changelogs will accommodate for these changes and inform you on how to update your code.
+1. Go to this projects releases and download the latest release
 
+2. Unzip the release's source code
 
-## Credits
-Made by [Emilio Coppola](https://github.com/coppolaemilio) and [Jowan-Spooner](https://github.com/Jowan-Spooner).
+3. On Godot's project list, click import and select The Last Fallacy
 
-Contributors: [CakeVR](https://github.com/CakeVR), [Exelia](https://github.com/exelia-antonov), [zaknafean](https://github.com/zaknafean), [and more!](https://github.com/dialogic-godot/dialogic/graphs/contributors).
+4. Open the project and enable Dialogic in the pluggin menu (Assest Library)
 
-Special thanks: [Arnaud](https://github.com/arnaudvergnet), [AnidemDex](https://github.com/AnidemDex), [ellogwen](https://github.com/ellogwen), [Tim Krief](https://github.com/timkrief), [Toen](https://twitter.com/ToenAndreMC), Òscar, [Francisco Presencia](https://francisco.io/), [M7mdKady14](https://github.com/M7mdKady14).
+5. Run Project
 
-### Thank you to all my [Patreons](https://www.patreon.com/coppolaemilio) and Github sponsors for making this possible!
+## Development log
+- [Github project board](https://github.com/users/JacksonPearce21/projects/2/views/1)
+
+- [Notion page](https://www.notion.so/7DIT-Major-Project-Portfolio-41c718dbb91a4d28ac0dfcd18b4e434e)
 
 ## License
-This project is licensed under the terms of the [MIT license](https://github.com/dialogic-godot/dialogic/blob/main/LICENSE).
+
+The Last Fallacy is licensed under the [GNU General Public License v3.0](https://github.com/JacksonPearce21/The-Last-Fallacy/blob/main/LICENSE).
+
+[Back to top](#the_last_fallacy)

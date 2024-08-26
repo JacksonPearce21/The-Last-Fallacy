@@ -1,25 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://culappb1q1agd"]
+[gd_scene load_steps=4 format=3 uid="uid://culappb1q1agd"]
 
 [ext_resource type="PackedScene" uid="uid://bjroir74hcbii" path="res://Scenes/Slime.tscn" id="1_8gggk"]
 [ext_resource type="Script" path="res://enemy_group.gd" id="1_i1ynm"]
+[ext_resource type="Texture2D" uid="uid://dcfkp22bae1s3" path="res://assets/Battle Backgrounds on RPG-Palmia - DeviantArt (1).jpg" id="2_rivlp"]
 
 [node name="EnemyGroup" type="Node2D"]
 script = ExtResource("1_i1ynm")
 
-[node name="Enemy 1" parent="." instance=ExtResource("1_8gggk")]
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.807843, 0.807843, 0.807843, 1)
+offset_left = -38.0
+offset_top = -20.0
+offset_right = 462.0
+offset_bottom = 230.0
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_rivlp")
 
-[node name="Enemy 2" parent="." instance=ExtResource("1_8gggk")]
+[node name="Enemy" parent="." instance=ExtResource("1_8gggk")]
+position = Vector2(37, 80)
 
-[node name="Enemy 3" parent="." instance=ExtResource("1_8gggk")]
+[node name="Enemy2" parent="." instance=ExtResource("1_8gggk")]
+position = Vector2(0, 80)
 
-[node name="Enemy 4" parent="." instance=ExtResource("1_8gggk")]
+[node name="Enemy3" parent="." instance=ExtResource("1_8gggk")]
+position = Vector2(0, 50)
 
-[connection signal="death" from="Enemy 1" to="." method="_on_enemy_1_death"]
-[connection signal="death" from="Enemy 2" to="." method="_on_enemy_2_death"]
-[connection signal="death" from="Enemy 3" to="." method="_on_enemy_3_death"]
-[connection signal="death" from="Enemy 4" to="." method="_on_enemy_4_death"]
+[node name="Enemy4" parent="." instance=ExtResource("1_8gggk")]
+position = Vector2(36, 50)
 
-[editable path="Enemy 1"]
-[editable path="Enemy 2"]
-[editable path="Enemy 3"]
-[editable path="Enemy 4"]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(97, 50)
+zoom = Vector2(5, 5)

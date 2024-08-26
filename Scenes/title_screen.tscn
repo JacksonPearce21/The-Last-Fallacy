@@ -1,0 +1,223 @@
+[gd_scene load_steps=24 format=3 uid="uid://btg6kig4wd4ba"]
+
+[ext_resource type="Script" path="res://Scripts/TitleScreen.gd" id="1_bqqp8"]
+[ext_resource type="Texture2D" uid="uid://cp1co3p2mvbv1" path="res://zareta-forestsunnyfinishedbig-modified.jpg" id="2_7n3qb"]
+[ext_resource type="FontFile" uid="uid://dqt4ymg8ivldh" path="res://AncientModernTales-a7Po.ttf" id="2_7nfwg"]
+[ext_resource type="Script" path="res://Scenes/Player_title_screen.gd" id="4_21k6g"]
+[ext_resource type="Texture2D" uid="uid://cyv2ov5lcuvwe" path="res://some more assets/sprites/characters/Soldier-modified.png" id="5_7c8g3"]
+[ext_resource type="Texture2D" uid="uid://dj5fk6vkdvrr2" path="res://some more assets/sprites/characters/player.png" id="5_itohm"]
+[ext_resource type="PackedScene" uid="uid://dh62ks2im22k" path="res://transition.tscn" id="7_rj7io"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lw33"]
+atlas = ExtResource("5_itohm")
+region = Rect2(0, 192, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ju16q"]
+atlas = ExtResource("5_itohm")
+region = Rect2(48, 192, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fekb3"]
+atlas = ExtResource("5_itohm")
+region = Rect2(96, 192, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbqf2"]
+atlas = ExtResource("5_itohm")
+region = Rect2(144, 192, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcuso"]
+atlas = ExtResource("5_itohm")
+region = Rect2(192, 192, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ywh4"]
+atlas = ExtResource("5_itohm")
+region = Rect2(240, 192, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m8yea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lw33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ju16q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fekb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbqf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcuso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ywh4")
+}],
+"loop": true,
+"name": &"side_walk",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb256"]
+atlas = ExtResource("5_7c8g3")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3wga"]
+atlas = ExtResource("5_7c8g3")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4husv"]
+atlas = ExtResource("5_7c8g3")
+region = Rect2(200, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sifb"]
+atlas = ExtResource("5_7c8g3")
+region = Rect2(300, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7et4n"]
+atlas = ExtResource("5_7c8g3")
+region = Rect2(400, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5iarb"]
+atlas = ExtResource("5_7c8g3")
+region = Rect2(500, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35gqh"]
+atlas = ExtResource("5_7c8g3")
+region = Rect2(600, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqjyk"]
+atlas = ExtResource("5_7c8g3")
+region = Rect2(700, 100, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5mfa0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb256")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3wga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4husv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7sifb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7et4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5iarb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35gqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqjyk")
+}],
+"loop": true,
+"name": &"side_walk",
+"speed": 5.0
+}]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchor_right = 1.312
+anchor_bottom = 1.121
+offset_left = -5.0
+offset_top = -1.0
+offset_right = -118.424
+offset_bottom = 42.592
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqp8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(552.25, 299.5)
+scale = Vector2(1.07568, 1.03299)
+texture = ExtResource("2_7n3qb")
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 858.0
+offset_top = 195.0
+offset_right = 1058.0
+offset_bottom = 309.0
+theme_override_fonts/font = ExtResource("2_7nfwg")
+theme_override_font_sizes/font_size = 85
+text = "Start"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 858.0
+offset_top = 313.0
+offset_right = 1058.0
+offset_bottom = 427.0
+theme_override_fonts/font = ExtResource("2_7nfwg")
+theme_override_font_sizes/font_size = 85
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 802.0
+offset_bottom = 507.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 12
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = ExtResource("2_7nfwg")
+theme_override_font_sizes/font_size = 120
+text = "THE 
+     LAST 
+          FALLACY"
+
+[node name="player" type="CharacterBody2D" parent="."]
+scale = Vector2(6, 6)
+script = ExtResource("4_21k6g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
+position = Vector2(10, 98)
+scale = Vector2(1.14583, 1.14583)
+sprite_frames = SubResource("SpriteFrames_m8yea")
+animation = &"side_walk"
+offset = Vector2(0, -17)
+
+[node name="soldiers" type="CharacterBody2D" parent="."]
+script = ExtResource("4_21k6g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="soldiers"]
+position = Vector2(-40, 540)
+scale = Vector2(7.4, 7.4)
+sprite_frames = SubResource("SpriteFrames_5mfa0")
+animation = &"side_walk"
+autoplay = "side_walk"
+
+[node name="soldiers2" type="CharacterBody2D" parent="."]
+script = ExtResource("4_21k6g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="soldiers2"]
+position = Vector2(-140, 540)
+scale = Vector2(7.4, 7.4)
+sprite_frames = SubResource("SpriteFrames_5mfa0")
+animation = &"side_walk"
+autoplay = "side_walk"
+
+[node name="soldiers3" type="CharacterBody2D" parent="."]
+script = ExtResource("4_21k6g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="soldiers3"]
+position = Vector2(-240, 540)
+scale = Vector2(7.4, 7.4)
+sprite_frames = SubResource("SpriteFrames_5mfa0")
+animation = &"side_walk"
+autoplay = "side_walk"
+
+[node name="Transition" parent="." instance=ExtResource("7_rj7io")]
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]

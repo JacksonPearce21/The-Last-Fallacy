@@ -1,0 +1,16 @@
+[style name="default style"]
+						    Welcome to the Last fallacy!\
+This game is fairly bare bones at the moment, but a lot of effort went in! This is the tutorial menu, please return here if you are ever confused, as the controls can be confusing... If you want to return here, use your mouse to click on the 'Help' button in the top right, at anytime.\
+Controls\:\
+'WASD' or 'Arrow Keys' to move\
+'Space' or 'Enter' or 'E' to select.\
+When to click what\:\
+In overworld you can move in all 4 directions\
+When in Dialogue 'Enter', 'Left Mouse Click' or 'Space'\
+When in battle 'WASD' or 'Arrow Keys' to select enemy, 'Enter' or 'Space' or 'E'to select enemy.\
+Battle explained\:\
+This game has a Turn-based combat system - it will swap between the player's and enemy's turn to attack.\
+During the players turn, the white 'select hand' indicates which player's move you are selecting (on the right side) and which enemy you are attacking with that player (on the left side). \
+After selecting which enemy that player will attack it will swap to next next players selection.\
+After all the players have selected they will attack the enemy they selected and the enemy's turn will begin.
+[signal arg="Player_wakeup"]

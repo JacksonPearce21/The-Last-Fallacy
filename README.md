@@ -34,6 +34,14 @@ The Last Fallacy starts with the player charater falling into the world below, a
 
 ## Installation
 
+1. Download The Last Fallacy zip file on the v0.3 and extract its contents.
+
+2. Run The Last Fallacy exe file amongst all the other files within the directory.
+   
+3. Enjoy!
+
+## Installationing on version previous to v0.3
+
 Follow these steps to install Godot and run The Last Fallacy!
 
 ### Godot Setup
